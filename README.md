@@ -1,1 +1,1 @@
-# My_Portfolio
+Portfolio that shows whole summary about me in a quick, interesting and scrolling way. I have crafted this with my love and passion on web development, I've tried to make things too eye catchy and intersting which helps you to scroll this from starting to the end.
