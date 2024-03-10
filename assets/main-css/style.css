@@ -19,10 +19,11 @@
 
 
 :root {
-    --primary-color: #FFFCE1;
-    --secondary-color: #0E100F;
-    --highlight-color1: #42D4EC;
-    --highlight-color2: #FFFCE1;
+    --primary-color: #FFF;
+    --secondary-color: #111111;
+    --highlight-color1: #41B61F;
+    /* --highlight-color1: #42D4EC; */
+    --highlight-color2: #FFF;
 
 }
 
@@ -140,13 +141,13 @@ body {
 
 .profile_txt_area>h2 {
     font-size: 20px;
-    color: #FA5A5A;
+    color: #F6BA53;
     font-family: 'proxima bold italic';
     transform: rotate(330deg);
     width: 10%;
     position: absolute;
-    top: -40%;
-    left: -6%;
+    top: -45%;
+    left: -3%;
 }
 
 .profile_txt_area>h3 {
@@ -173,7 +174,7 @@ body {
 }
 
 .user-img-box>img {
-    width: 100%;
+    width: 80%;
 }
 
 .icon-imgs .icons img {
@@ -314,9 +315,10 @@ body {
 }
 
 .links ul li:nth-child(2) {
-    background-color: var(--highlight-color2);
-    box-shadow: 0 0 20px 0px var(--highlight-color2);
+    background-color: #42D4EC;
+    box-shadow: 0 0 20px 0px #42D4EC;
 }
+
 
 .links ul li a {
     font-size: 20px;
@@ -426,16 +428,16 @@ body {
 
 @media (max-width: 768px) {
     .main>.page1>nav {
-        padding: 2px 3%;
+        padding: 30px 3%;
     }
 
     .page1>nav>.right>button {
-        padding: 2px 6px;
-        font-size: 13px;
+        padding: 8px 10px;
+        font-size: 16px;
     }
 
     .page1>nav>.left>h1 a {
-        font-size: 18px;
+        font-size: 28px;
     }
 
     .sell {
@@ -454,6 +456,7 @@ body {
 
     .page1>nav>.left>h1 {
         left: 2%;
+        top: 35%;
     }
 
     .page1 nav .center {
@@ -478,6 +481,7 @@ body {
 
     .profile_txt_area {
         padding-left: 20px;
+        margin-bottom: 80px !important;
     }
 
     .summary_txt {
@@ -511,13 +515,173 @@ body {
     }
 
     .links ul li a {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
 
 .page3 {
     width: 100%;
-    padding: 20px;
+    padding: 40px 0;
     background-color: #222222;
+}
+
+.bold_title h2 {
+    font-size: 68px;
+    margin: 0;
+    color: #fff;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
+}
+
+.light_title h3 {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.highlighter {
+    color: var(--highlight-color1);
+}
+
+.skill_box .title_box {
+    border: 2px solid #fff;
+    border-radius: 6px;
+    padding: 4px 10px;
+    display: inline-block;
+}
+
+.skill_box .title_box {
+    margin-bottom: 28px;
+    margin-top: 60px;
+}
+
+.skill_box .title_box h4 {
+    font-size: 26px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+
+.img_box img {
+    height: 5vmax;
+    background-color: #fff;
+    padding: 5px;
+    margin-right: 20px;
+    position: relative;
+    border-radius: 5px;
+}
+
+
+@media (max-width:768px) {
+    .img_box img {
+        height: 5.8vmax;
+        margin-right: 5px;
+        background-color: #fff;
+        padding: 4px;
+        position: relative;
+        border-radius: 5px;
+    }
+
+    .bold_title h2 {
+        font-size: 26px;
+    }
+
+    .light_title h3 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .skill_box .title_box h4 {
+        font-size: 16px;
+        margin-bottom: 2px;
+    }
+
+    .skill_box .title_box {
+        margin-bottom: 8px;
+        margin-top: 27px;
+    }
+
+    .page3 {
+        padding: 40px 20px;
+    }
+
+    .summary_txt p {
+        line-height: 40px;
+    }
+
+    .center {
+        visibility: hidden;
+    }
+
+    .user-img-box>img {
+        width: 100%;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+}
+
+
+.page4 {
+    background-color: #333333;
+    padding: 20px;
+    position: relative;
+}
+
+#work-sample {
+    background-color: #fff;
+    margin: 4vmax 0;
+    display: flex;
+    border-radius: 10px;
+    padding: 2vh;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#work-sample img {
+    height: 13vmax;
+    box-shadow: 1px 7px 20px rgba(0, 0, 0, 0.4);
+}
+
+.page5 {
+    width: 100%;
+    padding: 2vmax;
+    margin-top: 0vh;
+    background-color: #393939;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.page5>h1 {
+    font-size: 8vmax;
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 900;
+}
+
+.mail a {
+    color: #FC626A;
+}
+
+.instagram a {
+    color: #F6BA53;
+}
+
+.linkedin a {
+    color: #51CDE7;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vmax 0;
+    font-family: gilroy;
+    font-weight: 600;
+    font-size: 1.5vmax;
 }

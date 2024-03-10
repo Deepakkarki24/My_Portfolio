@@ -100,16 +100,36 @@ loadingAnimation();
 // loading animation on page load
 
 // summary txt animation
-gsap.from(".summary_txt p span", {
-  opacity: 0,
-  duration: 1.3,
-  stagger: 0.2,
-  scrollTrigger: {
-    trigger: ".summary_txt",
-    scroller: ".main",
-    start: "top 60%",
-    end: "top 5%",
-    // markers: true,
-    scrub: 2,
-  },
-});
+function ScrollTriggerAnimation() {
+  gsap.from(".summary_txt p span", {
+    opacity: 0,
+    duration: 1.3,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".summary_txt",
+      scroller: ".main",
+      start: "top 60%",
+      end: "top 5%",
+      // markers: true,
+      scrub: 2,
+    },
+  });
+
+  gsap.from(".skills_section img", {
+    opacity: 0,
+    y: -20,
+    x: -20,
+    duration: 1.3,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".skills_section",
+      scroller: ".main",
+      start: "top 50%",
+      end: "top 5%",
+      // markers: true,
+      scrub: 2,
+    },
+  });
+}
+
+ScrollTriggerAnimation();
