@@ -3,22 +3,33 @@
 function smoothScrolling() {
   gsap.registerPlugin(ScrollTrigger);
 
-  // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
+  const main = document.querySelector(".main");
 
   const locoScroll = new LocomotiveScroll({
-    el: document.querySelector(".main"),
+    el: main,
     smooth: true,
+
+    // disable smooth scrolling on mobile/tablet
+    smartphone: {
+      smooth: false,
+    },
+
+    tablet: {
+      smooth: false,
+    },
   });
-  // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+
+  // sync ScrollTrigger with Locomotive
   locoScroll.on("scroll", ScrollTrigger.update);
 
-  // tell ScrollTrigger to use these proxy methods for the ".main" element since Locomotive Scroll is hijacking things
+  // ScrollTrigger proxy
   ScrollTrigger.scrollerProxy(".main", {
     scrollTop(value) {
       return arguments.length
         ? locoScroll.scrollTo(value, 0, 0)
         : locoScroll.scroll.instance.scroll.y;
-    }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+    },
+
     getBoundingClientRect() {
       return {
         top: 0,
@@ -27,19 +38,28 @@ function smoothScrolling() {
         height: window.innerHeight,
       };
     },
-    // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-    pinType: document.querySelector(".main").style.transform
-      ? "transform"
-      : "fixed",
+
+    pinType: main.style.transform ? "transform" : "fixed",
   });
 
-  // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
-  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+  // refresh sync
+  ScrollTrigger.addEventListener("refresh", () => {
+    locoScroll.update();
+  });
 
-  // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+  // refresh after everything loads
   ScrollTrigger.refresh();
+
+  // fix resize issues
+  window.addEventListener("resize", () => {
+    locoScroll.update();
+    ScrollTrigger.refresh();
+  });
+
+  return locoScroll;
 }
-smoothScrolling();
+
+const locoScroll = smoothScrolling();
 
 // smoothscrolling effect on scroll
 

@@ -1015,19 +1015,19 @@ footer {
 
     /* ── Page1 hero ── */
     .page1 {
-        padding-top: 9.5rem;
+        padding-top: 30px;
     }
 
     /* Hide floating code cards on mobile — they overlap content */
     .hero-code-float2 {
-        top: 10%;
+        top: 50%;
     }
 
     /* ── Profile ── */
     .user-img-box>img {
         width: 100%;
-        /* max-width: 300px; */
         margin-top: 5px;
+        border-radius: 5%;
         margin-bottom: 20px;
     }
 
