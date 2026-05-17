@@ -92,12 +92,16 @@ body::before {
     z-index: 1000;
 }
 
+html.has-scroll-smooth {
+    overflow: hidden;
+}
+
 
 /* ── Main & Page1 ── */
 .main {
     background-color: var(--secondary-color);
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .page1 {
@@ -1011,26 +1015,25 @@ footer {
 
     /* ── Page1 hero ── */
     .page1 {
-        padding-top: 86px;
+        padding-top: 9.5rem;
     }
 
     /* Hide floating code cards on mobile — they overlap content */
-    .hero-code-float,
     .hero-code-float2 {
-        display: none;
+        top: 10%;
     }
 
     /* ── Profile ── */
     .user-img-box>img {
-        width: 88%;
-        max-width: 300px;
+        width: 100%;
+        /* max-width: 300px; */
         margin-top: 5px;
         margin-bottom: 20px;
     }
 
     .profile_txt_area {
         padding-left: 16px;
-        margin: 20px 0 10px 0;
+        margin: 20px 0 0px 0;
     }
 
     .profile_txt_area>h2 {
@@ -1052,7 +1055,7 @@ footer {
 
     /* ── Summary ── */
     .summary_txt {
-        padding: 40px 0;
+        padding: 20px 0;
     }
 
     .summary_txt_page .summary_txt p span {
@@ -1221,7 +1224,7 @@ footer {
     }
 
     .links ul {
-        flex-direction: column;
+        flex-direction: row;
         gap: 12px;
         align-items: center;
     }
