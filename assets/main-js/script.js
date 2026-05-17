@@ -108,8 +108,8 @@ function ScrollTriggerAnimation() {
     scrollTrigger: {
       trigger: ".summary_txt",
       scroller: ".main",
-      start: "top 60%",
-      end: "top 5%",
+      start: "top 80%",
+      end: "top 0%",
       // markers: true,
       scrub: 2,
     },
@@ -117,19 +117,60 @@ function ScrollTriggerAnimation() {
 
   gsap.from(".skills_section img", {
     opacity: 0,
-    y: -20,
-    x: -20,
-    duration: 1.3,
-    stagger: 0.2,
+    y: 30,
+    scale: 0.85,
+    duration: 0.8,
+    stagger: 0.08,
+    ease: "back.out(1.4)",
+
     scrollTrigger: {
       trigger: ".skills_section",
       scroller: ".main",
-      start: "top 50%",
-      end: "top 5%",
-      // markers: true,
-      scrub: 2,
+      start: "top 40%",
+      toggleActions: "play none none reverse",
     },
   });
 }
 
 ScrollTriggerAnimation();
+
+// ── Cursor ──
+const cursor = document.getElementById("cursor");
+const cursorRing = document.getElementById("cursor-ring");
+let mx = 0,
+  my = 0,
+  rx = 0,
+  ry = 0;
+document.addEventListener("mousemove", (e) => {
+  mx = e.clientX;
+  my = e.clientY;
+  cursor.style.left = mx + "px";
+  cursor.style.top = my + "px";
+});
+function animRing() {
+  rx += (mx - rx) * 0.12;
+  ry += (my - ry) * 0.12;
+  cursorRing.style.left = rx + "px";
+  cursorRing.style.top = ry + "px";
+  requestAnimationFrame(animRing);
+}
+
+animRing();
+
+gsap.utils.toArray(".exp-item").forEach((card) => {
+  gsap.from(card, {
+    opacity: 0,
+    x: 0,
+    y: 40,
+    duration: 1,
+    ease: "power4.out",
+
+    scrollTrigger: {
+      trigger: card,
+      scroller: ".main",
+      start: "top 82%",
+      toggleActions: "play none none reverse",
+      // markers: true,
+    },
+  });
+});

@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Deepak Karki — MERN Full Stack Developer + Gen AI</title>
     <link rel="stylesheet" href="assets/main-css/style.css" />
     <link
       rel="shortcut icon"
@@ -27,59 +27,118 @@
   </head>
 
   <body>
+    <!-- Custom Cursor -->
+    <div id="cursor"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- nav starts -->
+    <nav>
+      <div class="left">
+        <h1>
+          <a href="#"><i>Portfolio</i></a>
+        </h1>
+      </div>
+      <div class="center">
+        <div class="hero-badge">
+          <div class="dot"></div>
+          <span class="badge-text"
+            >Available for work · MERN Full Stack + Gen AI</span
+          >
+        </div>
+      </div>
+      <div class="right">
+        <a
+          href="./assets/cv/Deepak_Karki_Cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cv-btn"
+        >
+          View CV
+        </a>
+      </div>
+    </nav>
+    <!-- nav ends -->
     <div class="main">
       <!-- top section start -->
 
       <section class="page1">
-        <!-- nav starts -->
-        <nav>
-          <div class="left">
-            <h1>
-              <a href="#"><i>Portfolio</i></a>
-            </h1>
+        <!-- Floating Code Cards -->
+        <div class="hero-code-float">
+          <div class="code-dot-row">
+            <div class="code-dot dot-r"></div>
+            <div class="code-dot dot-y"></div>
+            <div class="code-dot dot-g"></div>
           </div>
-          <div class="center">
-            <!-- <ul>
-              <li class="nav-items"><a href="#">Home</a></li>
-              <li class="nav-items"><a href="#">Journey</a></li>
-              <li class="nav-items"><a href="#">Skills</a></li>
-              <li class="nav-items"><a href="#">Projects</a></li>
-            </ul> -->
-            <div class="hold">
-              <div class="sell">I am a</div>
-              <div class="word">
-                <div class="holder">
-                  <div>Developer.</div>
-                  <div>Designer.</div>
-                  <div>Coder.</div>
-                  <div>That's it :)</div>
-                </div>
-              </div>
-            </div>
+          <div>
+            <span class="code-kw">import</span>
+            <span class="code-var">React</span>
+            <span class="code-kw">from</span>
+            <span class="code-str">'react'</span>
           </div>
-          <div class="right">
-            <button href="#">Download Cv</button>
+          <div>
+            <span class="code-kw">import</span> {
+            <span class="code-var">useState</span> }
+            <span class="code-kw">from</span>
+            <span class="code-str">'react'</span>
           </div>
-        </nav>
-        <!-- nav ends -->
+          <br />
+          <div>
+            <span class="code-kw">const</span>
+            <span class="code-fn">Hero</span> = () =&gt; {
+          </div>
+          <div>
+            &nbsp;&nbsp;<span class="code-kw">const</span> [<span
+              class="code-var"
+              >active</span
+            >, <span class="code-fn">setActive</span>]
+          </div>
+          <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;=
+            <span class="code-fn">useState</span>(<span class="code-kw"
+              >true</span
+            >)
+          </div>
+          <br />
+          <div>&nbsp;&nbsp;<span class="code-kw">return</span> (</div>
+          <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="code-fn">Section</span>
+            <span class="code-var">active</span> /&gt;
+          </div>
+          <div>&nbsp;&nbsp;)</div>
+          <div>}</div>
+          <br />
+          <div class="code-cm">// ✓ Build complete</div>
+        </div>
+
+        <div class="hero-code-float hero-code-float2">
+          <div class="code-dot-row">
+            <div class="code-dot dot-r"></div>
+            <div class="code-dot dot-y"></div>
+            <div class="code-dot dot-g"></div>
+          </div>
+          <div class="code-cm"># n8n workflow</div>
+          <div>
+            <span class="code-fn">trigger</span>:
+            <span class="code-str">HTTP</span>
+          </div>
+          <div>
+            <span class="code-fn">model</span>:
+            <span class="code-str">gpt-4o</span>
+          </div>
+          <div>
+            <span class="code-fn">db</span>:
+            <span class="code-str">MongoDB</span>
+          </div>
+          <br />
+          <div class="code-cm">→ Automation active ✓</div>
+        </div>
 
         <!-- profile starts -->
         <div class="profile my-5">
           <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
               <div class="col-lg-12">
                 <div class="user-img-box text-center">
-                  <!-- <div class="icon-imgs">
-                    <div class="icons icon1">
-                      <img src="assets/code-icon/js.png" alt="icon image" />
-                    </div>
-                    <div class="icons icon2">
-                      <img src="assets/code-icon/html2.png" alt="icon image" />
-                    </div>
-                    <div class="icons icon3">
-                      <img src="assets/code-icon/html1.png" alt="icon image" />
-                    </div>
-                  </div> -->
                   <img src="assets/image/profile.png" alt="user image" />
                 </div>
               </div>
@@ -105,22 +164,45 @@
             <div class="col-lg-12">
               <div class="summary_txt">
                 <p>
-                  <span>Commerce </span> <span> graduate </span>
-                  <span> turned </span> <span> Mern stack developer. </span>
-                  <span> Proficient </span> <span> in </span>
-                  <span> Frontend </span> <span> technologies </span>
-                  <span> with </span> <span> React.js </span>
-                  <span> and </span> <span> Backend </span> <span> with </span>
-                  <span> Node </span> <span> express </span>
-                  <span> mongodb. </span><span> Passionate </span>
-                  <span> about </span> <span> creating </span>
-                  <span> visually </span> <span> appealing, </span>
-                  <span> user-centric </span> <span> interfaces </span>
-                  <span> that </span> <span> seamlessly </span>
-                  <span> blend </span> <span> business </span>
-                  <span> acumen with </span>
-                  <span> technical </span>
-                  <span> proficiency. </span>
+                  <span>Commerce </span>
+                  <span>graduate </span>
+                  <span>turned </span>
+                  <span>MERN </span>
+                  <span>Stack </span>
+                  <span>Developer </span>
+                  <span>with </span>
+                  <span>hands-on </span>
+                  <span>experience </span>
+                  <span>building </span>
+                  <span>scalable </span>
+                  <span>web </span>
+                  <span>applications </span>
+                  <span>using </span>
+                  <span>React.js, </span>
+                  <span>Node.js, </span>
+                  <span>Express, </span>
+                  <span>and </span>
+                  <span>MongoDB. </span>
+                  <span>Skilled </span>
+                  <span>in </span>
+                  <span>creating </span>
+                  <span>responsive, </span>
+                  <span>user-centric </span>
+                  <span>interfaces </span>
+                  <span>and </span>
+                  <span>integrating </span>
+                  <span>modern </span>
+                  <span>frontend </span>
+                  <span>technologies </span>
+                  <span>with </span>
+                  <span>backend </span>
+                  <span>systems, </span>
+                  <span>with </span>
+                  <span>growing </span>
+                  <span>expertise </span>
+                  <span>in </span>
+                  <span>Generative </span>
+                  <span>AI. </span>
                 </p>
                 <div class="links">
                   <ul>
@@ -128,7 +210,7 @@
                       <a
                         href="https://github.com/Deepakkarki24"
                         class="text-light text-center"
-                        ><i class="ri-github-fill text-dark"></i> Github Repo</a
+                        ><i class="ri-github-fill text-dark"></i> Github</a
                       >
                     </li>
                     <li>
@@ -193,6 +275,89 @@
         </div>
       </section>
       <!-- skills section ends -->
+
+      <!-- ═══════════════════════ EXPERIENCE ═══════════════════════ -->
+      <section id="experience">
+        <div class="section-header reveal">
+          <div class="section_head">
+            <div class="bold_title">
+              <h2>My <span class="highlighter">Journey</span></h2>
+            </div>
+            <div class="light_title">
+              <h3>Experience &amp; Education</h3>
+            </div>
+          </div>
+        </div>
+        <div class="exp-timeline">
+          <div class="exp-item reveal">
+            <div class="exp-dot"></div>
+            <div class="exp-card">
+              <div class="exp-period">11/2025 — Present</div>
+              <div class="exp-role">Jr. MERN Stack Developer</div>
+              <div class="exp-company">
+                Bricks &amp; Pixels Pvt. Ltd. (BnpAI) · Noida, India
+              </div>
+              <div class="exp-desc">
+                Contributing to BNP AI, an AI-powered real estate visualisation
+                platform. Engineered scalable and responsive frontend features
+                using React.js, TypeScript, and modern UI practices while
+                integrating REST APIs in close collaboration with backend teams.
+                Partnered with cross-functional teams across multiple client
+                projects to deliver high-impact solutions and enhance client
+                satisfaction.
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-item reveal">
+            <div class="exp-dot"></div>
+            <div class="exp-card">
+              <div class="exp-period">05/2024 — 06/2025</div>
+              <div class="exp-role">Executive</div>
+              <div class="exp-company">EXL · Noida, India</div>
+              <div class="exp-desc">
+                Developed and maintained dynamic, data-driven web applications
+                and interactive dashboards for enterprise client projects,
+                ensuring performance, scalability, and seamless user experience.
+                Built reusable, responsive UI components using React.js,
+                JavaScript, HTML, and CSS. Collaborated closely with QA and
+                cross-functional teams to deliver high-quality, client-centric
+                solutions within project timelines.
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-item reveal">
+            <div class="exp-dot"></div>
+            <div class="exp-card">
+              <div class="exp-period">07/2024 — 08/2025</div>
+              <div class="exp-role">MERN Stack Development</div>
+              <div class="exp-company">Accio Job · Noida, India</div>
+              <div class="exp-desc">
+                Completed an intensive MERN Stack bootcamp covering React.js,
+                Node.js, Express, MongoDB, REST APIs, and modern JavaScript.
+                Built multiple full-stack projects and gained hands-on
+                experience with industry-standard tooling.
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-item reveal">
+            <div class="exp-dot"></div>
+            <div class="exp-card">
+              <div class="exp-period">08/2020 — 08/2023</div>
+              <div class="exp-role">Bachelors of Commerce</div>
+              <div class="exp-company">Delhi University · Delhi, India</div>
+              <div class="exp-desc">
+                Graduated with a Bachelor's degree in Commerce from Delhi
+                University, building a strong analytical and business foundation
+                that complements technical skills in software development and
+                product thinking.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- project showcase section starts -->
       <section class="page4 project_showcase">
@@ -277,51 +442,6 @@
       </section>
       <!-- project showcase section ends -->
 
-      <!-- client project section -->
-      <section class="page4 project_showcase">
-        <div class="container">
-          <div id="page4">
-            <div class="bold_title">
-              <h2>projects of <span class="highlighter">clients</span></h2>
-            </div>
-            <div class="light_title">
-              <h3>these are few of my contribution in client projects</h3>
-            </div>
-            <div id="work-sample">
-              <div class="project_box">
-                <img src="assets/image/cp1.jpg" alt="Image" />
-                <div class="links">
-                  <ul style="justify-content: center">
-                    <li class="my-2">
-                      <a
-                        href="https://uniqueattarworld.co/"
-                        class="text-light text-center"
-                        >View</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="project_box">
-                <img src="assets/image/cp2.jpg" alt="Image" />
-                <div class="links">
-                  <ul style="justify-content: center">
-                    <li class="mx-2">
-                      <a
-                        href="https://uniqueattarworld.co/"
-                        class="text-light text-center"
-                        >View</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- client project section -->
-
       <!-- Footer section -->
       <section class="page5">
         <h1>
@@ -347,26 +467,61 @@
       </section>
       <!-- Footer section -->
     </div>
+
+    <!-- popup -->
+    <div id="portfolio-popup" class="popup-overlay">
+      <div class="popup-box">
+        <h2>Small Disclaimer</h2>
+        <p>
+          This portfolio is intentionally kept simple. The UI might not win
+          awards yet :), but the skills, logic, and code are where the real
+          story is.
+        </p>
+
+        <button id="closePopup">Continue</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+      integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
+      integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/main-js/script.js"></script>
+
+    <script>
+      const popup = document.getElementById("portfolio-popup");
+      const closeBtn = document.getElementById("closePopup");
+
+      // Check if popup already shown
+      const popupSeen = localStorage.getItem("portfolioPopupSeen");
+
+      if (!popupSeen) {
+        popup.style.display = "flex"; // show popup first time
+      } else {
+        popup.style.display = "none"; // hide on future refreshes
+      }
+
+      closeBtn.addEventListener("click", () => {
+        popup.style.display = "none";
+
+        // Save flag in browser storage
+        localStorage.setItem("portfolioPopupSeen", "true");
+      });
+    </script>
   </body>
-
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
-    integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
-    integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"
-  ></script>
-  <script src="assets/main-js/script.js"></script>
 </html>
