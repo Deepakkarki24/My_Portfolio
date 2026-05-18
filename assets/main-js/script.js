@@ -111,8 +111,14 @@ function ScrollTriggerAnimation() {
   const scroller = isMobile ? window : ".main";
 
   // Summary text animation
-  gsap.from(".summary_txt p span", {
+  gsap.set(".summary_txt p span", {
     opacity: 0,
+    y: 20,
+  });
+
+  gsap.to(".summary_txt p span", {
+    opacity: 1,
+    y: 0,
     duration: 1.3,
     stagger: 0.2,
     ease: "power2.out",
@@ -121,17 +127,23 @@ function ScrollTriggerAnimation() {
       trigger: ".summary_txt",
       scroller: scroller,
       start: "top 80%",
-      end: "top 30%",
+      end: "top 10%",
       scrub: 1,
       invalidateOnRefresh: true,
     },
   });
 
   // Skills animation
-  gsap.from(".skills_section img", {
+  gsap.set(".skills_section img", {
     opacity: 0,
     y: 30,
     scale: 0.85,
+  });
+
+  gsap.to(".skills_section img", {
+    opacity: 1,
+    y: 0,
+    scale: 1,
     duration: 0.8,
     stagger: 0.08,
     ease: "back.out(1.4)",
@@ -139,7 +151,9 @@ function ScrollTriggerAnimation() {
     scrollTrigger: {
       trigger: ".skills_section",
       scroller: scroller,
-      start: "top 85%",
+      start: "top 80%",
+      end: "bottom 70%",
+      scrub: 1,
       toggleActions: "play none none reverse",
       invalidateOnRefresh: true,
     },

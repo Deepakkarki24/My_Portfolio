@@ -536,7 +536,9 @@ nav>.right>a:hover {
 }
 
 .img_box img {
-    height: clamp(40px, 5vmax, 70px);
+    width: 8%;
+    object-fit: scale-down;
+    aspect-ratio: 16/10;
     background-color: #fff;
     padding: 5px;
     border-radius: 5px;
