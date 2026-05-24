@@ -211,10 +211,9 @@ nav>.right>a {
     background-color: transparent;
     padding: 6px 14px;
     border-radius: 20px;
-    border: none;
+    border: 2px solid #fff;
     text-decoration: none;
-    outline: 2px solid white;
-    color: white;
+    color: #fff;
     font-size: 14px;
     font-family: 'proxima bold italic';
     transition: all .5s;
@@ -224,8 +223,8 @@ nav>.right>a {
 }
 
 nav>.right>a:hover {
-    background-color: white;
-    color: black;
+    background-color: #fff;
+    color: #000;
 }
 
 
