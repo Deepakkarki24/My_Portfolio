@@ -160,6 +160,13 @@ export const EXPERIENCE_ITEMS = [
 
 export const PROJECTS = [
   {
+    image: '/assets/image/project-img-4.png',
+    demo: 'https://simp-client.onrender.com/',
+    code: 'https://github.com/Deepakkarki24/simp',
+    demoClassName: 'my-2',
+    codeClassName: 'mx-2',
+  },
+  {
     image: '/assets/image/project-img.jpg',
     demo: 'https://x-clone-frontend-n5ba.onrender.com/',
     code: 'https://github.com/Deepakkarki24/X-clone',
